@@ -1,0 +1,6 @@
+{% extends "admin/change_list.html" %}
+
+{% block object-tools-items %}
+    <a href="{{ add_via_ocr_url }}" class="button">Add Newspaper via OCR</a>
+    {{ block.super }}
+{% endblock %}

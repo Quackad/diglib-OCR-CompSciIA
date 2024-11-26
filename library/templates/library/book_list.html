@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book List</title>
+</head>
+<body>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/books/">Books</a>
+        <a href="/newspapers/">Newspapers</a>
+    </nav>
+    <h1>Books Collection</h1>
+    <ul>
+        {% for book in books %}
+            <li>{{ book.name }} by {{ book.author }} (ISBN: {{ book.isbn }})</li>
+        {% empty %}
+            <li>No books available.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

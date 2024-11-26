@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newspaper List</title>
+</head>
+<body>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/books/">Books</a>
+        <a href="/newspapers/">Newspapers</a>
+    </nav>
+    <h1>Newspapers Collection</h1>
+    <ul>
+        {% for newspaper in newspapers %}
+            <li>{{ newspaper.date }} - {{ newspaper.editorial }}</li>
+        {% empty %}
+            <li>No newspapers available.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

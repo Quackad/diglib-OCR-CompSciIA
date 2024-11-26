@@ -1,0 +1,10 @@
+{% extends "admin/base_site.html" %}
+
+{% block content %}
+    <h2>{{ title }}</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" name="confirm" class="button">Confirm and Save</button>
+    </form>
+{% endblock %}

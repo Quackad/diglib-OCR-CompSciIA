@@ -1,0 +1,12 @@
+# Exclude virtual environments
+env/
+
+# Exclude database files
+*.sqlite3
+
+# Exclude compiled Python files
+*.pyc
+__pycache__/
+
+# Exclude logs
+*.log
